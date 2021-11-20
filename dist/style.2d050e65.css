@@ -1,0 +1,64 @@
+body {
+    background-color:dimgrey;
+    
+}
+
+h1 {
+    font-family: 'Genos', sans-serif;
+    font-size:  30px;
+    text-align: center;
+    color: white;
+}
+
+/*
+* VVV Style Simon demi-Cercle VVV
+*/
+.PannHaut {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.PannBas {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.panel {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.panel:hover {
+    border: 2px solid white;
+    box-shadow: inset 0px 0px 0px 3px white;
+    box-sizing: border-box;
+}
+
+.panneau-bas-gauche {
+    border-top-left-radius: 200px;
+    background-color: red;
+    display: inline-block;
+    position: center;
+}
+
+.panneau-bas-droit {
+    border-top-right-radius: 200px;
+    background-color: blue;
+    display: inline-block;
+    position: center;
+}
+
+.panneau-haut-droit {
+    border-bottom-left-radius: 200px;
+    background-color: green;
+    display: inline-block;
+    position: center;
+}
+
+.panneau-haut-gauche {
+    border-bottom-right-radius: 200px;
+    background-color: yellow;
+    display: inline-block;
+    position: center;
+}
