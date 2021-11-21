@@ -17,7 +17,7 @@
         </div>
         
         <button class="button button1">START</button>
-        <button class="button button2">RESET</button>
+        <button onclick="location.reload()" class="button button2">RESET</button>
 
         <button class="button button3" id="OPM">RÉGLE</button>
         <div id="myRegle" class="Regle1">
@@ -26,7 +26,7 @@
                 <p> Voici les règles du jeu pour le Petit-Simon: 
                     <br>
                     <br>
-                    Un cercle de quatres couleurs ce présente à vous : Bleu, Rouge, Vert, Jaune.
+                    Un cercle de quatres couleurs se présente à vous : Bleu, Rouge, Vert, Jaune.
                     <br>
                     <br>
                     Le but du jeu est simple , vous devez répétez les couleurs sur lesquelles Simon va appuyer(En blanc.)
@@ -47,33 +47,16 @@
         <div class="ScoreNbrTouche">
             <h3> 00 </h3>
         </div>
-
                 <div class="PannHaut">
-                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-bas-gauche">
-                        <audio preload="auto" class="sound1">
-                            <source src="src/msq/simonSound1.mp3" type="audio/mpeg"/>
-                        </audio>
-                    </div>
-
-                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-bas-droit">
-                        <audio preload="auto" class="sound2">
-                            <source src="src/msq/simonSound2.mp3" type="audio/mpeg"/>
-                        </audio>
-                    </div>
+                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-bas-gauche"></div>
+                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-bas-droit"></div>
                 </div>
                 <div class="PannBas">
-                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-haut-droit">
-                        <audio preload="auto" class="sound3">
-                            <source src="src/msq/simonSound3.mp3" type="audio/mpeg"/>
-                        </audio>
-                    </div>
-                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-haut-gauche">
-                        <audio preload="auto" class="sound3">
-                            <source src="src/msq/simonSound4.mp3" type="audio/mpeg"/>
-                        </audio>
-                    </div>
+                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-haut-droit"></div>
+                    <div onclick="panneauClicked(event.currentTarget)" class="panel panneau-haut-gauche"></div>
                 </div>
         <script src="index.js"></script>
         <script src="regle.js"></script>
+        <script type="module" src="sound.js"></script>
     </body>
 </html>
