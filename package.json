@@ -2,6 +2,7 @@
   "name": "jeu-petit-simon",
   "version": "1.0.0",
   "description": "",
+  "type":"module",
   "main": "index.js",
   "dependencies": {
     "abab": "^2.0.5",
@@ -488,3 +489,5 @@
   "author": "Axel",
   "license": "ISC"
 }
+
+
