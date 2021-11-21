@@ -4,9 +4,20 @@ const hautdroit = document.querySelector('.panneau-haut-droit');
 const basgauche = document.querySelector('.panneau-bas-gauche');
 const basdroit = document.querySelector('.panneau-bas-droit');
 
+/*const Compteur = document.querySelector('ScoreNbrTouche');
+
+panelClicked.addEventListener('click', function(){
+  Compteur = Compteur+1;
+
+})
+*/
+
+
 
 const Start = document.querySelector('.button1');
 Start.addEventListener('click', main);
+
+
 
 function main()
 
