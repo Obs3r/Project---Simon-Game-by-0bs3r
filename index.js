@@ -1,24 +1,21 @@
-const topLeft = document.querySelector('.panneau-haut-gauche');
-const topRight = document.querySelector('.panneau-haut-droit');
-const bottomLeft = document.querySelector(
-  '.panneau-bas-gauche'
-);
-const bottomRight = document.querySelector(
-  '.panneau-bas-droit'
-);
 
-const getRandomPanel = () => {
+const hautgauche = document.querySelector('.panneau-haut-gauche');
+const hautdroit = document.querySelector('.panneau-haut-droit');
+const basgauche = document.querySelector('.panneau-bas-gauche');
+const basdroit = document.querySelector('.panneau-bas-droit');
+
+const getRandomPanneau = () => {
   const panels = [
-    topLeft,
-    topRight,
-    bottomLeft,
-    bottomRight
+    hautgauche,
+    hautdroit,
+    basgauche,
+    basdroit
   ];
   return panels[parseInt(Math.random() * panels.length)];
 };
 
-const sequence = [getRandomPanel()];
-let sequenceToGuess = [...sequence];
+const JoueCouleurs = [getRandomPanneau()];
+let JoueCouleursArep = [...JoueCouleurs];
 
 const flash = panel => {
   return new Promise(resolve => {
@@ -37,14 +34,14 @@ const flash = panel => {
 
 let canClick = false;
 
-const panelClicked = panelClicked => {
+const panneauClicked = panelClicked => {
   if (!canClick) return;
-  const expectedPanel = sequenceToGuess.shift();
+  const expectedPanel = JoueCouleursArep.shift();
   if (expectedPanel === panelClicked) {
-    if (sequenceToGuess.length === 0) {
+    if (JoueCouleursArep.length === 0) {
       // start new round
-      sequence.push(getRandomPanel());
-      sequenceToGuess = [...sequence];
+      JoueCouleurs.push(getRandomPanneau());
+      JoueCouleursArep = [...JoueCouleurs];
       startFlashing();
     }
   } else {
@@ -55,7 +52,7 @@ const panelClicked = panelClicked => {
 
 const startFlashing = async () => {
   canClick = false;
-  for (const panel of sequence) {
+  for (const panel of JoueCouleurs) {
     await flash(panel);
   }
   canClick = true;
